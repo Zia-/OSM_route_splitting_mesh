@@ -12,25 +12,25 @@ This is a supplementary script to OSM_route_length_calculation repository.
 ==================================================
 Requirements
 
-1. You must have a full PostgreSQL with PostGIS extension installed for this to work.
+1- You must have a full PostgreSQL with PostGIS extension installed for this to work.
 
-2. Install psycopg2 and osgeo packages.
+2- Install psycopg2 and osgeo packages.
 
 
 ==================================================
 Running Script
 
-1. Open any tool where you can run Python codes. It could be linux-terminal, eclipse, pycharm etc.
+1- Open any tool where you can run Python codes. It could be linux-terminal, eclipse, pycharm etc.
 
-2. Copy and Paste the content of the "script.py" file present in the current repository into your desired Python interpreter. 
+2- Copy and Paste the content of the "script.py" file present in the current repository into your desired Python interpreter. 
 
-3. Change the "connection" parameters (line 3) according to your system set-up. 
+3- Change the "connection" parameters (line 3) according to your system set-up. 
 
-4. Enter the following values in decimal degrees (line 6-9): xmin, ymin, xmax, ymax.
+4- Enter the following values in decimal degrees (line 6-9): xmin, ymin, xmax, ymax.
 
-5. Select your desired mesh size (line 10 and 11): xmesh and ymesh.
+5- Select your desired mesh size (line 10 and 11): xmesh and ymesh.
 
-6. Hit the "Run" python button and wait for the completion message.
+6- Hit the "Run" python button and wait for the completion message.
 
-7. Check your database for a newly generated table named mesh_x_<xmesh>_y_<ymesh>.
+7- Check your database for a newly generated table named mesh_x_<xmesh>_y_<ymesh>.
 

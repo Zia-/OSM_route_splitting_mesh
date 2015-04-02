@@ -1,7 +1,7 @@
 OSM_route_splitting_mesh
-==================================================
 
---------------------------------------------------
+
+==================================================
 Create a DEM mesh of any size of a bounded region. 
 
 
@@ -9,7 +9,7 @@ This repository contains a Python script, which could be used to generate mesh o
 This is a supplementary script to OSM_route_length_calculation repository.
 
 
---------------------------------------------------
+==================================================
 Requirements
 
 1. You must have a full PostgreSQL with PostGIS extension installed for this to work.
@@ -17,7 +17,7 @@ Requirements
 2. Install psycopg2 and osgeo packages.
 
 
---------------------------------------------------
+==================================================
 Running Script
 
 1. Open any tool where you can run Python codes. It could be linux-terminal, eclipse, pycharm etc.
