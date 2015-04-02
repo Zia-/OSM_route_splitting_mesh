@@ -1,6 +1,9 @@
-# OSM_route_splitting_mesh
-Create a DEM mesh of any size of a bounded region. 
+OSM_route_splitting_mesh
 ==================================================
+
+--------------------------------------------------
+Create a DEM mesh of any size of a bounded region. 
+
 
 This repository contains a Python script, which could be used to generate mesh of any x and y size of a given bounded region. 
 This is a supplementary script to OSM_route_length_calculation repository.

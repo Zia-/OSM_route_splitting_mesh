@@ -6,16 +6,16 @@ This repository contains a Python script, which could be used to generate mesh o
 This is a supplementary script to OSM_route_length_calculation repository.
 
 
-REQUIREMENTS
 --------------------------------------------------
+Requirements
 
 1. You must have a full PostgreSQL with PostGIS extension installed for this to work.
 
 2. Install psycopg2 and osgeo packages.
 
 
-RUNNING SCRIPT
 --------------------------------------------------
+Running Script
 
 1. Open any tool where you can run Python codes. It could be linux-terminal, eclipse, pycharm etc.
 
