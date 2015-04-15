@@ -1,6 +1,6 @@
 import psycopg2
 import osgeo.ogr
-connection = psycopg2.connect("host='<localhost>' dbname='<database_name>' user='<postgres_user>' password='<postgres_password>'")
+connection = psycopg2.connect("host='localhost' dbname='<database_name>' user='<postgres_user>' password='<postgres_password>'")
 cursor1 = connection.cursor()
 cursor2 = connection.cursor()
 xmin = <minimum_longitude_in_decimal_degrees>

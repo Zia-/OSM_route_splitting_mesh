@@ -2,35 +2,35 @@ OSM_route_splitting_mesh
 
 
 ==================================================
-Create a DEM mesh of any size of a bounded region. 
+Create a mesh table of any desired resolution, of a bounded region. 
 
 
-This repository contains a Python script, which could be used to generate mesh of any x and y size of a given bounded region. 
-This is a supplementary script to OSM_route_length_calculation repository.
+This repository contains a Python script, which could be used to generate mesh table of any x and y resolution, of a given bounded region. 
+This is a supplementary script to OSM_route_length_calculation repository (https://github.com/Zia-/OSM_route_length_calculation).
 
 
 ==================================================
 Requirements
 
-1. You must have a full PostgreSQL with PostGIS extension installed for this to work.
+1- You must have a full PostgreSQL database, with PostGIS extension, installed for this to work.
 
-2. Install psycopg2 and osgeo packages.
+2- Install psycopg2 and osgeo packages.
 
 
 ==================================================
 Running Script
 
-1. Open any tool where you can run Python codes. It could be linux-terminal, eclipse, pycharm etc.
+1- Open any tool where you can run Python codes. It could be linux-terminal, eclipse, pycharm etc. Eclipse Luna (4.4.1) IDE has been used in the following steps. 
 
-2. Copy and Paste the content of the "script.py" file present in the current repository into your desired Python interpreter. 
+2- Copy and Paste the content of "script.py" file of current repository into your desired Python interpreter. 
 
-3. Change the "connection" parameters (line 3) according to your system set-up. 
+3- Change the "connection" parameters (line 3) according to your system set-up. Possible variables are <database_name>, <postgres_user> and <postgres_password>, when the PostgreSQL databse is installed locally.
 
-4. Enter the following values in decimal degrees (line 6-9): xmin, ymin, xmax, ymax.
+4- Enter the <minimum_longitude_in_decimal_degrees>, <minimum_latitude_in_decimal_degrees>, <maximum_longitude_in_decimal_degrees> and <maximum_latitude_in_decimal_degrees> values in decimal degrees (line 6-9). These are defining the extent of the area of study. Could be similar or larger than the extent defined in OSM_route_length_calculation repository (procedure 1).
 
-5. Select your desired mesh size (line 10 and 11): xmesh and ymesh.
+5- Select your desired mesh size (line 10 and 11). Enter the variables <x_size_of_desired_mesh_in_meters> and <y_size_of_desired_mesh_in_meters> in meters.
 
-6. Hit the "Run" python button and wait for the completion message.
+6- Hit the "Run" python button and wait for the completion message.
 
-7. Check your database for a newly generated table named mesh_x_<xmesh>_y_<ymesh>.
+7- Check your database for a newly generated table, named as mesh_x_<xmesh>_y_<ymesh>.
 
