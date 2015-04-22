@@ -24,13 +24,13 @@ Running Script
 
 2- Copy and Paste the content of "script.py" file of current repository into your desired Python interpreter. 
 
-3- Change the "connection" parameters (line 3) according to your system set-up. Possible variables are '<database_name>', '<postgres_user>' and '<postgres_password>', when the PostgreSQL databse is installed locally.
+3- Change the "connection" parameters (line 3) according to your system set-up. Possible variables are 'database_name', 'postgres_user' and 'postgres_password', when the PostgreSQL databse is installed locally.
 
-4- Enter the <minimum_longitude_in_decimal_degrees>, <minimum_latitude_in_decimal_degrees>, <maximum_longitude_in_decimal_degrees> and <maximum_latitude_in_decimal_degrees> values in decimal degrees (line 6-9). These are defining the extent of the area of study. Could be similar or larger than the extent defined in OSM_route_length_calculation repository (procedure 1).
+4- Enter the 'minimum_longitude_in_decimal_degrees', 'minimum_latitude_in_decimal_degrees', 'maximum_longitude_in_decimal_degrees' and 'maximum_latitude_in_decimal_degrees' values in decimal degrees (line 6-9). These are defining the extent of the area of study. Could be similar or larger than the extent defined in OSM_route_length_calculation repository (procedure 1).
 
-5- Select your desired mesh size (line 10 and 11). Enter the variables <x_size_of_desired_mesh_in_meters> and <y_size_of_desired_mesh_in_meters> in meters.
+5- Select your desired mesh size (line 10 and 11). Enter the variables 'x_size_of_desired_mesh_in_meters' and 'y_size_of_desired_mesh_in_meters' in meters.
 
 6- Hit the "Run" python button and wait for the completion message.
 
-7- Check your database for a newly generated table, named as mesh_x_<x_size_of_desired_mesh_in_meters>_y_<y_size_of_desired_mesh_in_meters>.
+7- Check your database for a newly generated table, named as mesh_x_'x_size_of_desired_mesh_in_meters'_y_'y_size_of_desired_mesh_in_meters'.
 
