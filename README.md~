@@ -32,5 +32,5 @@ Running Script
 
 6- Hit the "Run" python button and wait for the completion message.
 
-7- Check your database for a newly generated table, named as mesh_x_'x_size_of_desired_mesh_in_meters'_y_'y_size_of_desired_mesh_in_meters'.
+7- Check your database for a newly generated table, named as mesh_x_'x_size_of_desired_mesh_in_meters'__y__'y_size_of_desired_mesh_in_meters'.
 
