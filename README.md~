@@ -30,7 +30,9 @@ Running Script
 
 5- Select your desired mesh size (line 10 and 11). Enter the variables 'x_size_of_desired_mesh_in_meters' and 'y_size_of_desired_mesh_in_meters' in meters.
 
+6- Enter the EPSG code (line 12, variable 'EPSG_code_for_WGS84_UTM_zone') for your region's WGS84 UTM zone. One can find a detailed list at http://spatialreference.org/ref/ 
+
 6- Hit the "Run" python button and wait for the completion message.
 
-7- Check your database for a newly generated table, named as mesh_x_'x_size_of_desired_mesh_in_meters'__y__'y_size_of_desired_mesh_in_meters'.
+7- Check your database for a newly generated table, named as mesh_x_'x_size_of_desired_mesh_in_meters'_y_'y_size_of_desired_mesh_in_meters'.
 

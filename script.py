@@ -9,16 +9,17 @@ xmax = <maximum_longitude_in_decimal_degrees>
 ymax = <maximum_latitude_in_decimal_degrees>
 xmesh = <x_size_of_desired_mesh_in_meters>
 ymesh = <y_size_of_desired_mesh_in_meters>
+epsg = <EPSG_code_for_WGS84_UTM_zone>
 try:
     query = "create table mesh_x_"+str(xmesh).replace(".","_")+"_y_"+str(ymesh).replace(".","_")+"(gid BIGSERIAL PRIMARY KEY); SELECT AddGeometryColumn ('mesh_x_"+str(xmesh).replace(".","_")+"_y_"+str(ymesh).replace(".","_")+"','geom',4326,'POLYGON',2);"
     cursor1.execute(query)
     connection.commit()
-    query = "with point as (select st_transform(st_geomfromtext('point("+str(xmin)+" "+str(ymin)+")', 4326), 3857) as geom) select st_x(geom), st_y(geom) from point"
+    query = "with point as (select st_transform(st_geomfromtext('point("+str(xmin)+" "+str(ymin)+")', 4326), "+str(epsg)+") as geom) select st_x(geom), st_y(geom) from point"
     cursor1.execute(query)
     for i in cursor1:
         xmin = i[0]
         ymin = i[1]
-    query = "with point as (select st_transform(st_geomfromtext('point("+str(xmax)+" "+str(ymax)+")', 4326), 3857) as geom) select st_x(geom), st_y(geom) from point"
+    query = "with point as (select st_transform(st_geomfromtext('point("+str(xmax)+" "+str(ymax)+")', 4326), "+str(epsg)+") as geom) select st_x(geom), st_y(geom) from point"
     cursor1.execute(query)
     for i in cursor1:
         xmax = i[0]
@@ -34,7 +35,7 @@ try:
         while x1<xmax:
             x2 = x1 + xmesh
             y2 = y1 + ymesh
-            query = "insert into mesh_x_"+str(xmesh).replace(".","_")+"_y_"+str(ymesh).replace(".","_")+" (geom) select st_transform(st_setsrid(st_geomfromtext('polygon(("+str(x1)+" "+str(y1)+", "+str(x2)+" "+str(y1)+", "+str(x2)+" "+str(y2)+", "+str(x1)+" "+str(y2)+", "+str(x1)+" "+str(y1)+"))'), 3857), 4326)"
+            query = "insert into mesh_x_"+str(xmesh).replace(".","_")+"_y_"+str(ymesh).replace(".","_")+" (geom) select st_transform(st_setsrid(st_geomfromtext('polygon(("+str(x1)+" "+str(y1)+", "+str(x2)+" "+str(y1)+", "+str(x2)+" "+str(y2)+", "+str(x1)+" "+str(y2)+", "+str(x1)+" "+str(y1)+"))'), "+str(epsg)+"), 4326)"
             cursor1.execute(query)
             connection.commit()
             x1 = x2
