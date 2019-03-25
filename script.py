@@ -7,8 +7,8 @@ xmin = <minimum_longitude_in_decimal_degrees>
 ymin = <minimum_latitude_in_decimal_degrees>
 xmax = <maximum_longitude_in_decimal_degrees>
 ymax = <maximum_latitude_in_decimal_degrees>
-xmesh = <x_size_of_desired_mesh_in_meters>
-ymesh = <y_size_of_desired_mesh_in_meters>
+xmesh = <x_size_of_desired_mesh_in_degrees>
+ymesh = <y_size_of_desired_mesh_in_degrees>
 epsg = <EPSG_code_for_WGS84_UTM_zone>
 try:
     query = "create table mesh_x_"+str(xmesh).replace(".","_")+"_y_"+str(ymesh).replace(".","_")+"(gid BIGSERIAL PRIMARY KEY); SELECT AddGeometryColumn ('mesh_x_"+str(xmesh).replace(".","_")+"_y_"+str(ymesh).replace(".","_")+"','geom',4326,'POLYGON',2);"
